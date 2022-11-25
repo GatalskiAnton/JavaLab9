@@ -29,4 +29,9 @@ public class Pair<K extends Comparable<K>,V> implements Map.Entry<K,V>{
         element = value;
         return oldElement;
     }
+
+    @Override
+    public String toString() {
+        return "(" + priority + ";" + element + ")";
+    }
 }
