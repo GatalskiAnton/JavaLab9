@@ -1,4 +1,6 @@
-package PriorityQueue;
+package Iterator;
+
+import PriorityQueue.*;
 
 import java.util.NoSuchElementException;
 

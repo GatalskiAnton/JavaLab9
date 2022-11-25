@@ -1,0 +1,4 @@
+0 Pair1
+1 Pair2
+6 Pair3
+12 Pair4

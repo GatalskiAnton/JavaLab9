@@ -2,13 +2,12 @@ package PriorityQueue;
 
 import java.util.Map;
 
-public class Pair<K extends Comparable<K>,V> implements Map.Entry<K,V>{
+public class Pair<K extends Comparable<K>, V> implements Map.Entry<K, V> {
 
     private final K priority;
     private V element;
 
-    public Pair(K priority, V element)
-    {
+    public Pair(K priority, V element) {
         this.priority = priority;
         this.element = element;
     }

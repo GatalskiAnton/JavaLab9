@@ -1,4 +1,6 @@
-package PriorityQueue;
+package Iterator;
+
+import PriorityQueue.Pair;
 
 public interface MyIterator<K extends Comparable<K>, V> {
     public Pair<K, V> first();
