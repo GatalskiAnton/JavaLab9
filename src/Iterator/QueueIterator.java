@@ -2,10 +2,10 @@ package Iterator;
 
 import PriorityQueue.*;
 
-import java.util.NoSuchElementException;
+public class QueueIterator<K extends Comparable<K>, V> implements MyIterator<Pair<K, V>> {
 
-public class QueueIterator<K extends Comparable<K>, V> implements MyIterator<K, V> {
 
+    private int index;
     private PriorityQueue<K, V> queue;
 
     public QueueIterator(PriorityQueue<K, V> queue) {
@@ -13,25 +13,22 @@ public class QueueIterator<K extends Comparable<K>, V> implements MyIterator<K, 
     }
 
     @Override
-    public Pair<K, V> first() {
-        if (queue.isEmpty())
-            throw new NoSuchElementException("queue is empty");
-
-        return queue.getFirst();
+    public void first() {
+        index = 0;
     }
 
     @Override
-    public Pair<K, V> next() {
-        return queue.extractMinimum();
+    public void next() {
+        ++index;
     }
 
     @Override
     public boolean isDone() {
-        return queue.isEmpty();
+        return index >= queue.size() ? true : false;
     }
 
     @Override
     public Pair<K, V> currentItem() {
-        return queue.getMinimum();
+        return queue.get(index);
     }
 }

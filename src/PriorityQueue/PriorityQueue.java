@@ -1,12 +1,11 @@
 package PriorityQueue;
 
-import Iterator.MyIterable;
 import Iterator.QueueIterator;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
-public class PriorityQueue<K extends Comparable<K>, V> implements MyIterable<K, V> {
+public class PriorityQueue<K extends Comparable<K>, V>  {
     ArrayList<Pair<K, V>> queue;
 
     public PriorityQueue() {
@@ -48,10 +47,10 @@ public class PriorityQueue<K extends Comparable<K>, V> implements MyIterable<K, 
         return pair;
     }
 
-    public Pair<K, V> getFirst() {
-        return queue.get(0);
+    public Pair<K,V> get(int index)
+    {
+        return queue.get(index);
     }
-
     public int size() {
         return queue.size();
     }
@@ -81,8 +80,8 @@ public class PriorityQueue<K extends Comparable<K>, V> implements MyIterable<K, 
         return model;
     }
 
-    @Override
-    public QueueIterator getIterator() {
-        return new QueueIterator<K, V>(this);
+    public QueueIterator iterator()
+    {
+        return new QueueIterator(this);
     }
 }

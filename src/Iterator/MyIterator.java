@@ -1,13 +1,12 @@
 package Iterator;
 
-import PriorityQueue.Pair;
 
-public interface MyIterator<K extends Comparable<K>, V> {
-    public Pair<K, V> first();
+public interface MyIterator<T> {
+    void first();
 
-    public Pair<K, V> next();
+    void next();
 
-    public boolean isDone();
+    boolean isDone();
 
-    public Pair<K, V> currentItem();
+    T currentItem();
 }
